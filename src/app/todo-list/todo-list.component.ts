@@ -14,6 +14,7 @@ export class TodoListComponent {
   @Input() todoArr: Itodo[] = [];
   @Output() passEmitComplete = new EventEmitter();
   @Output() passEmitUndo = new EventEmitter();
+  @Output() passEmitDelete = new EventEmitter();
 
   passComplateTask(id: number) {
     this.passEmitComplete.emit(id);
@@ -26,5 +27,8 @@ export class TodoListComponent {
       (task) => task.isCompleted
     );
     return tasksCompleted.length;
+  }
+  passDeleteTask(id: number) {
+    this.passEmitDelete.emit(id);
   }
 }

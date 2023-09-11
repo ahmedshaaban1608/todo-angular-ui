@@ -6,6 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./todo-input.component.css'],
 })
 export class TodoInputComponent {
+
   todoText: string = '';
   alertError: Boolean = false;
   alertClose: Boolean = false;
@@ -25,5 +26,8 @@ export class TodoInputComponent {
       return;
     }
     this.emitTaskContent.emit(this.todoText);
+    this.todoText = '';
   }
+
+  
 }

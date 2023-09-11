@@ -19,7 +19,10 @@
       *ngIf="!task.isCompleted"
       (click)="taskcomplete()"
     ></i>
-    <i class="fa-solid fs-4 text-danger fw-bold fa-x"></i>
+    <i
+      class="fa-solid fs-4 text-danger fw-bold fa-x"
+      (click)="openConfirmationModal()"
+    ></i>
   </div>
   <p class="overflow-y-auto mt-2" style="height: 100px">
     {{ task.text }}

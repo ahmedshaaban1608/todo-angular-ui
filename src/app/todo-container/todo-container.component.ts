@@ -28,4 +28,8 @@ export class TodoContainerComponent {
     const taskIndex = this.todoList.findIndex((task) => task.id === id);
     this.todoList[taskIndex].isCompleted = false;
   }
+  receivedTaskToDelete(id: number) {
+    const afterDeleteArr = this.todoList.filter((task) => task.id !== id);
+    this.todoList = afterDeleteArr;
+  }
 }

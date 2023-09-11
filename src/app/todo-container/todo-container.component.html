@@ -5,5 +5,6 @@
   [todoArr]="todoList"
   (passEmitComplete)="markAsComplete($event)"
   (passEmitUndo)="markAsUnComplete($event)"
+  (passEmitDelete)= "receivedTaskToDelete($event)"
 ></app-todo-list>
 <app-footer></app-footer>

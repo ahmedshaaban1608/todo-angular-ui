@@ -1,27 +1,68 @@
-# TodoApp
+# Todo App - Angular and Bootstrap
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+![Todo App Screenshot](./src/assets/screenshot.png)
 
-## Development server
+This is a simple Todo application built using Angular and Bootstrap. It allows users to manage their tasks by adding, marking as complete, undoing, and deleting them. Additionally, the app displays an alert if the todo text is less than 10 characters and prompts for confirmation before deleting a todo.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- Add new todos.
+- Mark todos as complete.
+- Undo completed todos.
+- Delete todos with confirmation.
+- Alert for short todo text (< 10 characters).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting Started
 
-## Build
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Prerequisites
 
-## Running unit tests
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [Angular CLI](https://angular.io/cli)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Installation
 
-## Running end-to-end tests
+1. Clone the repository:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```
+   git clone https://github.com/ahmedshaaban1608/todo-angular-ui.git
+   ```
 
-## Further help
+2. Install project dependencies:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   ```
+   npm install
+   ```
+
+## Running the Application
+
+1. Start the development server:
+
+   ```
+   ng serve
+   ```
+
+2. Open your browser and navigate to http://localhost:4200/ to access the Todo App.
+
+## Usage
+
+- Adding a Todo: Enter your todo text in the input field and click the "Add" button. An alert will be displayed if the text is less than 10 characters.
+
+- Marking as Complete/Undo: Click the checkbox next to a todo to mark it as complete. Click it again to undo the completion.
+
+- Deleting a Todo: Click the "Delete" icon to delete a todo. A confirmation modal will appear before deletion.
+
+## Built With
+
+- Angular - The web framework used
+- Bootstrap - Front-end CSS framework
+- ng-bootstrap - Angular Bootstrap components
+
+## Contributing
+
+Contributions are welcome! Please feel free to open issues or pull requests.
+
+## Acknowledgments
+
+Thanks to the Angular and Bootstrap communities for their excellent documentation and resources.

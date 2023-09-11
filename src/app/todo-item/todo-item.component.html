@@ -2,9 +2,15 @@
   [ngClass]="task.isCompleted ? 'task-complete' : 'bg-light'"
   class="shadow p-3 rounded-3 task-item"
 >
-  <div class="text-end">
+  <div class="text-end position-relative">
+    <span
+      class="badge bg-primary position-absolute top-0 start-0"
+      *ngIf="task.isCompleted"
+    >
+      Done
+    </span>
     <i
-      class="fa-solid fa-rotate-left me-4 fs-3 text-warning fw-bold"
+      class="fa-solid fa-rotate-left me-4 fs-3 text-primary fw-bold"
       *ngIf="task.isCompleted"
       (click)="taskUndo()"
     ></i>

@@ -11,7 +11,7 @@
         {{ todoArr.length == 1 ? "task" : "tasks" }} -
         {{ complatedTaskCounter() }}
         {{
-          complatedTaskCounter() == 1
+          complatedTaskCounter() < 2
             ? "task is completed"
             : "tasks are completed"
         }}

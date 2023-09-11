@@ -1,0 +1,28 @@
+<div style="min-height: 350px" class="container pt-5 pb-5">
+  <div class="row g-5">
+    <div class="pt-5 text-center" *ngIf="!todoArr.length">
+      <h2 class="pt-5" style="font-size: 4em; color: #999">
+        your Todo list is an empty
+      </h2>
+    </div>
+    <div class="text-center" *ngIf="todoArr.length">
+      <span class="text-dark">
+        You have {{ todoArr.length }}
+        {{ todoArr.length == 1 ? "task" : "tasks" }} -
+        {{ complatedTaskCounter() }}
+        {{
+          complatedTaskCounter() == 1
+            ? "task is completed"
+            : "tasks are completed"
+        }}
+      </span>
+    </div>
+    <app-todo-item
+      class="col-lg-4 col-md-6"
+      *ngFor="let task of todoArr"
+      [task]="task"
+      (emitCompleteTask)="passComplateTask($event)"
+      (emitUndoTask)="passUndoTask($event)"
+    ></app-todo-item>
+  </div>
+</div>

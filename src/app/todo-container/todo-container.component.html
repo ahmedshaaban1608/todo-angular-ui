@@ -1,0 +1,9 @@
+<app-todo-input
+  (emitTaskContent)="receivedTaskContent($event)"
+></app-todo-input>
+<app-todo-list
+  [todoArr]="todoList"
+  (passEmitComplete)="markAsComplete($event)"
+  (passEmitUndo)="markAsUnComplete($event)"
+></app-todo-list>
+<app-footer></app-footer>

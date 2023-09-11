@@ -1,0 +1,7 @@
+.task-item .fa-solid:hover {
+  scale: 1.2;
+  cursor: pointer;
+}
+.task-complete {
+  background-color: lightgreen;
+}

@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@fortawesome/fontawesome-free/css/all.css";
+/*---------------------------scroll bar style---------------------------*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #d4deec;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--bs-primary);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bs-secondary);
+}
+.logo {
+  width: 100px !important;
+}
+/*-----------------------------------------------------*/

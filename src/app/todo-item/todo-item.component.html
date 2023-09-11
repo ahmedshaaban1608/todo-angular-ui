@@ -1,0 +1,21 @@
+<div
+  [ngClass]="task.isCompleted ? 'task-complete' : 'bg-light'"
+  class="shadow p-3 rounded-3 task-item"
+>
+  <div class="text-end">
+    <i
+      class="fa-solid fa-rotate-left me-4 fs-3 text-warning fw-bold"
+      *ngIf="task.isCompleted"
+      (click)="taskUndo()"
+    ></i>
+    <i
+      class="fa-solid me-4 fs-3 text-success fw-bold fa-check"
+      *ngIf="!task.isCompleted"
+      (click)="taskcomplete()"
+    ></i>
+    <i class="fa-solid fs-4 text-danger fw-bold fa-x"></i>
+  </div>
+  <p class="overflow-y-auto mt-2" style="height: 100px">
+    {{ task.text }}
+  </p>
+</div>

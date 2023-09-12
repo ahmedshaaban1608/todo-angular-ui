@@ -1,19 +1,15 @@
 import { Component } from '@angular/core';
+import { Itask } from '../interface/itask';
 
-interface Itodo {
-  id: number;
-  text: string;
-  isCompleted: Boolean;
-}
 @Component({
   selector: 'app-todo-container',
   templateUrl: './todo-container.component.html',
   styleUrls: ['./todo-container.component.css'],
 })
 export class TodoContainerComponent {
-  todoList: Itodo[] = [];
+  todoList: Itask[] = [];
   receivedTaskContent(todo: string) {
-    const task: Itodo = {
+    const task: Itask = {
       id: this.todoList.length,
       text: todo,
       isCompleted: false,

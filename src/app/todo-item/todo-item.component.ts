@@ -1,11 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DeleteConfirmComponent } from '../delete-confirm/delete-confirm.component';
-interface Itodo {
-  id?: number;
-  text?: string;
-  isCompleted?: Boolean;
-}
+import { Itask } from '../interface/itask';
+
 @Component({
   selector: 'app-todo-item',
   templateUrl: './todo-item.component.html',
@@ -14,7 +11,7 @@ interface Itodo {
 export class TodoItemComponent {
   constructor(private modalService: NgbModal) {}
 
-  @Input() task: Itodo = {};
+  @Input() task!: Itask;
   @Output() emitCompleteTask = new EventEmitter();
   @Output() emitUndoTask = new EventEmitter();
   @Output() emitDeleteTask = new EventEmitter();

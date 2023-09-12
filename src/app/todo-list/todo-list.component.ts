@@ -1,17 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Itask } from '../interface/itask';
 
-interface Itodo {
-  id: number;
-  text: string;
-  isCompleted: Boolean;
-}
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.css'],
 })
 export class TodoListComponent {
-  @Input() todoArr: Itodo[] = [];
+  @Input() todoArr: Itask[] = [];
   @Output() passEmitComplete = new EventEmitter();
   @Output() passEmitUndo = new EventEmitter();
   @Output() passEmitDelete = new EventEmitter();
@@ -23,7 +19,7 @@ export class TodoListComponent {
     this.passEmitUndo.emit(id);
   }
   complatedTaskCounter() {
-    const tasksCompleted: Itodo[] = this.todoArr.filter(
+    const tasksCompleted: Itask[] = this.todoArr.filter(
       (task) => task.isCompleted
     );
     return tasksCompleted.length;
